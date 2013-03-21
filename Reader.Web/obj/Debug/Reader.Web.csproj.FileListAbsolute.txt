@@ -33,3 +33,11 @@ C:\Users\Tristan McNab\Projects\Reader\Reader.Web\bin\AttributeRouting.xml
 C:\Users\Tristan McNab\Projects\Reader\Reader.Web\bin\AttributeRouting.Web.xml
 C:\Users\Tristan McNab\Projects\Reader\Reader.Web\bin\AttributeRouting.Web.Mvc.xml
 C:\Users\Tristan McNab\Projects\Reader\Reader.Web\bin\WebActivator.pdb
+C:\Users\Tristan McNab\Projects\Reader\Reader.Web\bin\Reader.Data.dll
+C:\Users\Tristan McNab\Projects\Reader\Reader.Web\bin\Reader.Services.dll
+C:\Users\Tristan McNab\Projects\Reader\Reader.Web\bin\MongoDB.Bson.dll
+C:\Users\Tristan McNab\Projects\Reader\Reader.Web\bin\Reader.Data.pdb
+C:\Users\Tristan McNab\Projects\Reader\Reader.Web\bin\Reader.Services.pdb
+C:\Users\Tristan McNab\Projects\Reader\Reader.Web\bin\MongoDB.Bson.xml
+C:\Users\Tristan McNab\Projects\Reader\Reader.Web\bin\MongoDB.Driver.dll
+C:\Users\Tristan McNab\Projects\Reader\Reader.Web\bin\MongoDB.Driver.xml

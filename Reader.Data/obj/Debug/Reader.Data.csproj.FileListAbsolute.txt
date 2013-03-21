@@ -2,3 +2,8 @@ C:\Users\Tristan McNab\Projects\Reader\Reader.Data\bin\Debug\Reader.Data.dll
 C:\Users\Tristan McNab\Projects\Reader\Reader.Data\bin\Debug\Reader.Data.pdb
 C:\Users\Tristan McNab\Projects\Reader\Reader.Data\obj\Debug\Reader.Data.dll
 C:\Users\Tristan McNab\Projects\Reader\Reader.Data\obj\Debug\Reader.Data.pdb
+C:\Users\Tristan McNab\Projects\Reader\Reader.Data\bin\Debug\MongoDB.Bson.dll
+C:\Users\Tristan McNab\Projects\Reader\Reader.Data\bin\Debug\MongoDB.Driver.dll
+C:\Users\Tristan McNab\Projects\Reader\Reader.Data\bin\Debug\MongoDB.Bson.xml
+C:\Users\Tristan McNab\Projects\Reader\Reader.Data\bin\Debug\MongoDB.Driver.xml
+C:\Users\Tristan McNab\Projects\Reader\Reader.Data\obj\Debug\Reader.Data.csprojResolveAssemblyReference.cache

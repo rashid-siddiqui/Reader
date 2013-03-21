@@ -11,5 +11,13 @@
 
         [BsonDateTimeOptions(Kind = DateTimeKind.Utc)]
         public DateTime last_login { get; set; }
+
+        [BsonIgnore]
+        public override string[] index_keys
+        {
+            get {
+                return new[] { "email_address" };
+            }
+        }
     }
 }

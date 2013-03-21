@@ -133,6 +133,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="a\js\lib\meny.js" />
     <Content Include="Global.asax" />
     <None Include="a\js\lib\jquery-vsdoc.js" />
     <Content Include="a\js\lib\jquery.js" />
@@ -196,7 +197,6 @@
   <ItemGroup>
     <Folder Include="a\js\local\" />
     <Folder Include="Content\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -206,6 +206,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Main\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Reader.Data\Reader.Data.csproj">
+      <Project>{7bc2c859-9095-4614-8e7c-a616718ae49c}</Project>
+      <Name>Reader.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Reader.Services\Reader.Services.csproj">
+      <Project>{171fab9c-cb76-4354-b0c8-f7bd99bf29b9}</Project>
+      <Name>Reader.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

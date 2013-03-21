@@ -2,11 +2,41 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>MiniReader</title>
+    <link rel="stylesheet/less" type="text/css" href="~/a/less/app.less" />
+    <script src="~/a/js/lib/less.js"></script>
 </head>
 <body>
-    <div>
-        You are logged in.
+    <nav class="meny">
+        <h1>MiniReader</h1>
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+        </ul>
+    </nav>
+    <div class="container-fluid">
+        Hey @User.Identity.Name
     </div>
+    <script src="~/a/js/lib/meny.js"></script>
+    <script src="~/a/js/lib/jquery.js"></script>
+    <script src="~/a/js/lib/bootstrap.js"></script>
+    <script>
+        var meny = Meny.create({
+            // The element that will be animated in from off screen
+            menuElement: document.querySelector('.meny'),
+
+            // The contents that gets pushed aside while Meny is active
+            contentsElement: document.querySelector('.container-fluid'),
+
+            // The alignment of the menu (top/right/bottom/left)
+            position: 'left',
+
+            // The width of the menu (when using left/right position)
+            width: 260
+        });
+
+
+    </script>
 </body>
 </html>

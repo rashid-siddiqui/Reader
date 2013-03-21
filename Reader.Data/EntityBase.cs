@@ -4,6 +4,7 @@
     using MongoDB.Bson;
     using MongoDB.Bson.Serialization.Attributes;
     using MongoDB.Bson.Serialization.IdGenerators;
+    using MongoDB.Driver;
 
     /// <summary>
     /// Base class for all objects stored in the database.
@@ -21,5 +22,8 @@
                 return ObjectId.Parse(this.id).CreationTime;
             }
         }
+
+        [BsonIgnore]
+        public abstract string[] index_keys { get; }
     }
 }
