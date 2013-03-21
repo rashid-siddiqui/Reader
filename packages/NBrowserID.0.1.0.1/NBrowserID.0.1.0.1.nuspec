@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>NBrowserID</id>
+    <version>0.1.0.1</version>
+    <title>NBrowserID</title>
+    <authors>cvrajeesh</authors>
+    <owners>cvrajeesh</owners>
+    <licenseUrl>http://www.opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/cvrajeesh/NBrowserID</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A library for integrating BrowserID based authentication into your web application.</description>
+    <releaseNotes />
+    <copyright />
+    <language />
+    <dependencies>
+      <dependency id="Newtonsoft.Json" version="4.0.5" />
+    </dependencies>
+    <references>
+      <reference file="NBrowserID.dll" />
+    </references>
+  </metadata>
+</package>

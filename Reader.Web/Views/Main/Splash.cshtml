@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Splash</title>
+    <link rel="stylesheet/less" type="text/css" href="~/a/less/app.less" />
+    <script src="~/a/js/lib/less.js"></script>
+    <script src="https://login.persona.org/include.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <header class="page-header">
+            <h1>Reader</h1>
+        </header>
+        <section>
+
+        </section>
+        <footer class="navbar navbar-fixed-bottom">
+            <button type="button" class="btn btn-primary btn-large btn-block">Sign In</button>
+        </footer>
+    </div>
+    <script src="~/a/js/lib/jquery.js"></script>
+    <script src="~/a/js/lib/bootstrap.js"></script>
+    <script>
+        function gotVerifiedEmail(assertion) {
+            // got an assertion, now send it up to the server for verification
+            if (assertion !== null) {
+                $.ajax({
+                    type: 'POST',
+                    url: '/sign-in',
+                    data: { assertion: assertion },
+                    success: function (res, status, xhr) {
+                        if (res != null) {
+                            window.location = '/';
+                        }
+                    },
+                    error: function (res, status, xhr) {
+                        alert("login failure" + res);
+                    }
+                });
+            }
+        }
+
+        $('button').click(function () {
+            navigator.id.getVerifiedEmail(gotVerifiedEmail);
+        });
+    </script>
+</body>
+</html>

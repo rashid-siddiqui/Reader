@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{3E6C709C-C558-4FE5-B386-24E91323964A}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reader.Web", "Reader.Web\Reader.Web.csproj", "{2DD73904-E8FE-4731-8EB5-C477C5E809F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reader.Services", "Reader.Services\Reader.Services.csproj", "{171FAB9C-CB76-4354-B0C8-F7BD99BF29B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reader.Data", "Reader.Data\Reader.Data.csproj", "{7BC2C859-9095-4614-8E7C-A616718AE49C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DD73904-E8FE-4731-8EB5-C477C5E809F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DD73904-E8FE-4731-8EB5-C477C5E809F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DD73904-E8FE-4731-8EB5-C477C5E809F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DD73904-E8FE-4731-8EB5-C477C5E809F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{171FAB9C-CB76-4354-B0C8-F7BD99BF29B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{171FAB9C-CB76-4354-B0C8-F7BD99BF29B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{171FAB9C-CB76-4354-B0C8-F7BD99BF29B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{171FAB9C-CB76-4354-B0C8-F7BD99BF29B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BC2C859-9095-4614-8E7C-A616718AE49C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BC2C859-9095-4614-8E7C-A616718AE49C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BC2C859-9095-4614-8E7C-A616718AE49C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BC2C859-9095-4614-8E7C-A616718AE49C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,6 @@
+C:\Users\Tristan McNab\Projects\Reader\Reader.Services\bin\Debug\Reader.Services.dll
+C:\Users\Tristan McNab\Projects\Reader\Reader.Services\bin\Debug\Reader.Services.pdb
+C:\Users\Tristan McNab\Projects\Reader\Reader.Services\bin\Debug\QDFeedParser.dll
+C:\Users\Tristan McNab\Projects\Reader\Reader.Services\obj\Debug\Reader.Services.csprojResolveAssemblyReference.cache
+C:\Users\Tristan McNab\Projects\Reader\Reader.Services\obj\Debug\Reader.Services.dll
+C:\Users\Tristan McNab\Projects\Reader\Reader.Services\obj\Debug\Reader.Services.pdb

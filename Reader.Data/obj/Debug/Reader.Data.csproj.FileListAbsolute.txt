@@ -1,0 +1,4 @@
+C:\Users\Tristan McNab\Projects\Reader\Reader.Data\bin\Debug\Reader.Data.dll
+C:\Users\Tristan McNab\Projects\Reader\Reader.Data\bin\Debug\Reader.Data.pdb
+C:\Users\Tristan McNab\Projects\Reader\Reader.Data\obj\Debug\Reader.Data.dll
+C:\Users\Tristan McNab\Projects\Reader\Reader.Data\obj\Debug\Reader.Data.pdb
