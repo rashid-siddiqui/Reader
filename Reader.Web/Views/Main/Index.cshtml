@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model IEnumerable<Reader.Web.Models.ArticleItem>
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -10,8 +11,10 @@
     <nav class="meny row-fluid">
         <h1>MiniReader</h1>
         <ul>
-            <li><button type="button" class="btn">All</button></li>
-            <li><button type="button" class="btn" data-toggle="modal" data-target="#AddFeedModal">Add</button></li>
+            <li>
+                <button type="button" class="btn">All</button></li>
+            <li>
+                <button type="button" class="btn" data-toggle="modal" data-target="#AddFeedModal">Add</button></li>
         </ul>
         <ul id="Feeds">
             <li>One</li>
@@ -21,8 +24,7 @@
         <div class="span12 navbar-fixed-bottom">
             <div class="row-fluid">
                 <div class="span6">
-                    <a data-toggle="modal" data-target="#SettingsModal" class="btn btn-block">
-                        Settings
+                    <a data-toggle="modal" data-target="#SettingsModal" class="btn btn-block">Settings
                     </a>
                 </div>
                 <div class="span6">
@@ -31,8 +33,18 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid">
-        Hey @User.Identity.Name
+    <div class="container-fluid" style="overflow: hidden;">
+        <div class="span12">
+                @foreach (var article in Model)
+                {
+                    <article>
+                        <header class="page-header">
+                            <h2>@article.Article.title</h2>
+                        </header>
+                        @Html.Raw(article.Content)
+                    </article>
+                }
+        </div>
     </div>
     <script src="~/a/js/lib/meny.js"></script>
     <script src="~/a/js/lib/jquery.js"></script>

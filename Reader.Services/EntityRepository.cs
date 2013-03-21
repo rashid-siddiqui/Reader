@@ -80,7 +80,19 @@
             {
                 return this.Collection.Insert<T>(entity).Ok;
             }
-            catch (Exception ex)
+            catch
+            {
+                return false;
+            }
+        }
+
+        internal bool Save(T entity)
+        {
+            try
+            {
+                return this.Collection.Save<T>(entity).Ok;
+            }
+            catch
             {
                 return false;
             }

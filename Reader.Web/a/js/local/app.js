@@ -6,7 +6,7 @@ var App = (function (self, $, Meny)
     var meny = Meny.create({
         menuElement: document.querySelector('.meny'),
         contentsElement: document.querySelector('.container-fluid'),
-        position: 'left',
+        position: 'right',
         width: 300
     });
 

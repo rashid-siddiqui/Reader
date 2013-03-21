@@ -41,3 +41,7 @@ C:\Users\Tristan McNab\Projects\Reader\Reader.Web\bin\Reader.Services.pdb
 C:\Users\Tristan McNab\Projects\Reader\Reader.Web\bin\MongoDB.Bson.xml
 C:\Users\Tristan McNab\Projects\Reader\Reader.Web\bin\MongoDB.Driver.dll
 C:\Users\Tristan McNab\Projects\Reader\Reader.Web\bin\MongoDB.Driver.xml
+C:\Users\Tristan McNab\Projects\Reader\Reader.Web\bin\QDFeedParser.dll
+C:\Users\Tristan McNab\Projects\Reader\Reader.Web\bin\NReadability.dll
+C:\Users\Tristan McNab\Projects\Reader\Reader.Web\bin\SgmlReaderDll.dll
+C:\Users\Tristan McNab\Projects\Reader\Reader.Web\bin\NReadability.xml

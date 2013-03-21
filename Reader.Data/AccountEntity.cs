@@ -1,6 +1,7 @@
 ﻿namespace Reader.Data
 {
     using System;
+    using System.Collections.Generic;
     using MongoDB.Bson.Serialization.Attributes;
 
     public sealed class AccountEntity : EntityBase
@@ -19,5 +20,7 @@
                 return new[] { "email_address" };
             }
         }
+
+        public SortedDictionary<string,List<string>> feeds { get; set; }
     }
 }

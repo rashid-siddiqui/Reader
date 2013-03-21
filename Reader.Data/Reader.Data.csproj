@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="AccountEntity.cs" />
     <Compile Include="EntityBase.cs" />
+    <Compile Include="FeedEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

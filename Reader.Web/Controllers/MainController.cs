@@ -5,6 +5,8 @@
     using AttributeRouting.Web.Mvc;
     using NBrowserID;
     using Reader.Services;
+    using NReadability;
+    using System.Linq;
 
     public class MainController : Controller
     {
@@ -13,8 +15,25 @@
         public ActionResult Index ()
         {
             if (User.Identity.IsAuthenticated)
-            {
-                return View();
+            {   
+                var feeds = Reader.Services.Feeds.FeedsFor(User)
+                    .Select(p => p.articles)
+                    .ToList()
+                    .SelectMany(i => i)
+                    .OrderByDescending(k => k.published);
+
+                var transcoder = new NReadabilityWebTranscoder();
+                var tr2 = new NReadabilityTranscoder(ReadingStyle.Newspaper, ReadingMargin.Medium, ReadingSize.Medium);
+                bool outy = false;
+
+
+                var model = feeds.Select(p => new Models.ArticleItem()
+                {
+                    Article = p,
+                    Content = p.content
+                });
+
+                return View(model);
             }
             else
             {

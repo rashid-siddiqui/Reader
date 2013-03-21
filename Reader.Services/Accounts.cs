@@ -3,6 +3,8 @@
     using System;
     using System.Linq;
     using Reader.Data;
+    using System.Collections.Generic;
+    using System.Security.Principal;
 
     public static class Accounts
     {
@@ -34,10 +36,27 @@
             {
                 balance = initial_balance,
                 email_address = email_address,
-                last_login = DateTime.UtcNow
+                last_login = DateTime.UtcNow,
+                feeds = new SortedDictionary<string,List<string>>()
             };
 
             return Accounts.Entities.Insert(entity);
+        }
+
+        public static bool AddFeedTo(IPrincipal User, string feed_id)
+        {
+            var account = Entities.Single(acct => acct.email_address == User.Identity.Name);
+            if (!account.feeds.ContainsKey(feed_id))
+            {
+                account.feeds.Add(feed_id, new List<string>());
+            }
+
+            return Accounts.Entities.Save(account);
+        }
+
+        public static AccountEntity Get(IPrincipal User)
+        {
+            return Accounts.Entities.Single(acct => acct.email_address == User.Identity.Name);
         }
     }
 }

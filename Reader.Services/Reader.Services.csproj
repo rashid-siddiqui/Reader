@@ -53,6 +53,7 @@
     <Compile Include="Accounts.cs" />
     <Compile Include="Configuration.cs" />
     <Compile Include="EntityRepository.cs" />
+    <Compile Include="Feeds.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
