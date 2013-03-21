@@ -16,7 +16,9 @@ var App = (function (self, $, Meny)
 
 
     
-
+    $('[data-toggle="modal"]').on('click', function () {
+        meny.close();
+    });
 
     self.UI = self.UI || {
 

@@ -195,6 +195,7 @@
     <Content Include="a\less\app.less" />
     <Content Include="a\less\bootstrap\bootswatch.less" />
     <Content Include="Views\Main\Modals\Settings.cshtml" />
+    <Content Include="Views\Main\Modals\AddFeed.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\" />

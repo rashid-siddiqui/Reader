@@ -11,7 +11,7 @@
         <h1>MiniReader</h1>
         <ul>
             <li><button type="button" class="btn">All</button></li>
-            <li><button type="button" class="btn">Add</button></li>
+            <li><button type="button" class="btn" data-toggle="modal" data-target="#AddFeedModal">Add</button></li>
         </ul>
         <ul id="Feeds">
             <li>One</li>
@@ -35,6 +35,7 @@
         Hey @User.Identity.Name
     </div>
     @Html.Partial("~/Views/Main/Modals/Settings.cshtml")
+    @Html.Partial("~/Views/Main/Modals/AddFeed.cshtml")
     <script src="~/a/js/lib/meny.js"></script>
     <script src="~/a/js/lib/jquery.js"></script>
     <script src="~/a/js/lib/bootstrap.js"></script>
