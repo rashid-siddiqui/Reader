@@ -9,9 +9,10 @@
 <body>
     <nav class="meny row-fluid">
         <h1>MiniReader</h1>
-        <button type="button" class="btn btn-block" id="AddFeed">
-            &plus; Add Feed
-        </button>
+        <ul>
+            <li><button type="button" class="btn">All</button></li>
+            <li><button type="button" class="btn">Add</button></li>
+        </ul>
         <ul id="Feeds">
             <li>One</li>
             <li>Two</li>
@@ -33,36 +34,10 @@
     <div class="container-fluid">
         Hey @User.Identity.Name
     </div>
-    <div class="modal hide fade" id="SettingsModal">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h3>Settings</h3>
-        </div>
-        <div class="modal-body">
-            Settings
-        </div>
-    </div>
-
+    @Html.Partial("~/Views/Main/Modals/Settings.cshtml")
     <script src="~/a/js/lib/meny.js"></script>
     <script src="~/a/js/lib/jquery.js"></script>
     <script src="~/a/js/lib/bootstrap.js"></script>
-    <script>
-        var meny = Meny.create({
-            // The element that will be animated in from off screen
-            menuElement: document.querySelector('.meny'),
-
-            // The contents that gets pushed aside while Meny is active
-            contentsElement: document.querySelector('.container-fluid'),
-
-            // The alignment of the menu (top/right/bottom/left)
-            position: 'left',
-
-            // The width of the menu (when using left/right position)
-            width: 260
-        });
-
-        document.ontouchmove = function (e) { e.preventDefault() };
-
-    </script>
+    <script src="~/a/js/local/app.js"></script>
 </body>
 </html>

@@ -134,6 +134,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="a\js\lib\meny.js" />
+    <Content Include="a\js\local\app.js" />
     <Content Include="Global.asax" />
     <None Include="a\js\lib\jquery-vsdoc.js" />
     <Content Include="a\js\lib\jquery.js" />
@@ -193,9 +194,9 @@
     <Content Include="a\less\bootstrap\accordion.less" />
     <Content Include="a\less\app.less" />
     <Content Include="a\less\bootstrap\bootswatch.less" />
+    <Content Include="Views\Main\Modals\Settings.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="a\js\local\" />
     <Folder Include="Content\" />
   </ItemGroup>
   <ItemGroup>
