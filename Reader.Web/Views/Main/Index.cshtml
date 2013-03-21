@@ -34,11 +34,13 @@
     <div class="container-fluid">
         Hey @User.Identity.Name
     </div>
-    @Html.Partial("~/Views/Main/Modals/Settings.cshtml")
-    @Html.Partial("~/Views/Main/Modals/AddFeed.cshtml")
     <script src="~/a/js/lib/meny.js"></script>
     <script src="~/a/js/lib/jquery.js"></script>
     <script src="~/a/js/lib/bootstrap.js"></script>
     <script src="~/a/js/local/app.js"></script>
+    @Html.Partial("~/Views/Main/Modals/Settings.cshtml")
+    @Html.Partial("~/Views/Main/Modals/AddFeed.cshtml", new Reader.Web.Models.AddFeedModel())
+    <script src="~/a/js/lib/jquery.validate.js"></script>
+    <script src="~/a/js/lib/jquery.validate.unobtrusive.js"></script>
 </body>
 </html>
