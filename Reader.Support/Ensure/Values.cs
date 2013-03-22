@@ -13,5 +13,14 @@
                 throw new T();
             }
         }
+
+        public static void IsNotNull<T>(object first)
+            where T: Exception, new()
+        {
+            if (first == null)
+            {
+                throw new T();
+            }
+        }
     }
 }

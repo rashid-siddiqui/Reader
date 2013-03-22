@@ -147,6 +147,7 @@
     <Content Include="a\js\local\app.addfeed.js" />
     <Content Include="a\js\local\app.js" />
     <Content Include="a\font\fontawesome\fontawesome-webfont.svg" />
+    <Content Include="a\js\local\splash.js" />
     <Content Include="Global.asax" />
     <None Include="a\js\lib\jquery-vsdoc.js" />
     <Content Include="a\js\lib\jquery.js" />

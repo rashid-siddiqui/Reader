@@ -1,26 +1,34 @@
 ﻿@model Reader.Web.Models.SignInViewModel
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     <fieldset>
         <legend>Sign In / Register</legend>
-    
-    @Html.ValidationSummary(true)
+        <p>You can sign in or register with the form below. Both fields are required.</p>
 
-    <div class="control-group">
-        @Html.LabelFor(model => model.Email, new { @class = "control-label" })
-        <div class="controls">
-            @Html.TextBoxFor(model => model.Email, new { })
-            <span class="help-block">@Html.ValidationMessageFor(model => model.Email)</span>
+
+        @Html.ValidationSummary(true)
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.Email, new { @class = "control-label" })
+            <div class="controls">
+                @Html.TextBoxFor(model => model.Email, new { type = "email" })
+                <span class="help-block" style="font-size: small">@Html.ValidationMessageFor(model => model.Email)</span>
+            </div>
         </div>
-    </div>
-    <div class="control-group">
-        @Html.LabelFor(model => model.Password, new { @class = "control-label" })
-        <div class="controls">
-            @Html.PasswordFor(model => model.Password, new { })
-            <span class="help-block">@Html.ValidationMessageFor(model => model.Password)</span>
+        <div class="control-group">
+            @Html.LabelFor(model => model.Password, new { @class = "control-label" })
+            <div class="controls">
+                @Html.PasswordFor(model => model.Password, new { })
+                <span class="help-block" style="font-size: small">@Html.ValidationMessageFor(model => model.Password)</span>
+            </div>
         </div>
-    </div>    
-        </fieldset>
+        <div>
+            <button type="submit" class="btn btn-primary">Okay</button>
+            <button type="button" class="btn btn-danger" onclick="window.location='/recover'">
+                Recover Password &raquo;
+            </button>
+        </div>
+    </fieldset>
 }

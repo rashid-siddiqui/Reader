@@ -64,7 +64,7 @@
 
         public static IQueryable<FeedEntity> FeedsFor(IPrincipal User)
         {
-            var account = Accounts.Get(User);
+            var account = User.Account();
             var feed_ids = account.feeds.Select(id => id.Key);
             return Feeds.Entities.Where(
                 f => feed_ids.Contains(f.id)

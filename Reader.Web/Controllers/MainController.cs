@@ -1,13 +1,11 @@
 ﻿namespace Reader.Web.Controllers
 {
+    using System.Linq;
     using System.Web.Mvc;
     using System.Web.Security;
     using AttributeRouting.Web.Mvc;
-    using NBrowserID;
-    using Reader.Services;
-    using NReadability;
-    using System.Linq;
     using Reader.Web.Models;
+    using Reader.Services;
 
     public class MainController : Controller
     {
@@ -46,23 +44,19 @@
         [POST("/sign-in")]
         public JsonResult SignIn(SignInViewModel viewmodel)
         {
-            //var authentication = new BrowserIDAuthentication();
-            //var verificationResult = authentication.Verify(assertion);
-            //if (verificationResult.IsVerified)
-            //{
-            //    string email = verificationResult.Email.Trim().ToLower();
-            //    if (!Accounts.Exists(email) && !Accounts.Register(email, 10.0M))
-            //    {
-            //        return Json(false);
-            //    }
-            //    else
-            //    {
-            //        FormsAuthentication.SetAuthCookie(email, false);
-            //        return Json(true);
-            //    }
-            //}
+            //
+            if (!ModelState.IsValid) return Json(false);
 
-            return Json(null);
+            //
+            if (!Accounts.Exists(viewmodel.Email)) {
+                if (!Accounts.Register(viewmodel.Email, viewmodel.Password, 10.0M)) return Json(false);
+            }
+
+            //
+            if (!Accounts.CanSignIn(viewmodel.Email, viewmodel.Password)) return Json(false);
+
+            FormsAuthentication.SetAuthCookie(viewmodel.Email.ToLower(), false);
+            return Json(true);
         }
 
         #endregion

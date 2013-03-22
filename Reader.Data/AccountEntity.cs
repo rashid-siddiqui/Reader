@@ -55,5 +55,16 @@
         }
 
         #endregion
+
+        #region Methods
+
+        public bool IsPasswordValid(string plaintext_password)
+        {
+            return SHA512.Create().ComputeHash(
+                Encoding.Unicode.GetBytes(plaintext_password).Concat(this.password_salt).ToArray()
+            ).SequenceEqual(this.password_hash);
+        }
+
+        #endregion
     }
 }
