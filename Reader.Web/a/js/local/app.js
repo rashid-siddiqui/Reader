@@ -10,23 +10,13 @@ var App = (function (self, $, Meny)
         width: 220
     });
 
-    document.ontouchmove = function (e) {
-        e.preventDefault();
-    };
-
-
-    
-    $('[data-toggle="modal"]').on('click', function () {
-        meny.close();
-    });
-
     self.UI = self.UI || {
-
-
-
+        Menu: {
+            close: function () {
+                meny.close();
+            }
+        }
     };
-
-
 
 
     return self;

@@ -1,6 +1,5 @@
-﻿@model IEnumerable<Reader.Web.Models.ArticleItem>
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>MiniReader</title>
@@ -9,25 +8,18 @@
 </head>
 <body style="background-color:#333">
     @Html.Partial("~/Views/Main/Components/Navigation.cshtml")
-    <div class="container-fluid" style="overflow: hidden;">
-        <div class="span12">
-                @foreach (var article in Model)
-                {
-                    <article>
-                        <header class="page-header">
-                            <h2>@article.Article.title</h2>
-                        </header>
-                        @Html.Raw(article.Content)
-                    </article>
-                }
+    <div class="container-fluid">
+        <div class="tab-content">
+            @Html.Partial("~/Views/Main/Tabs/Home.cshtml")
+            @Html.Partial("~/Views/Main/Tabs/Feeds.cshtml")
+            @Html.Partial("~/Views/Main/Tabs/Pages.cshtml")
+            @Html.Partial("~/Views/Main/Tabs/Settings.cshtml")
         </div>
     </div>
     <script src="~/a/js/lib/meny.js"></script>
     <script src="~/a/js/lib/jquery.js"></script>
     <script src="~/a/js/lib/bootstrap.js"></script>
     <script src="~/a/js/local/app.js"></script>
-    @Html.Partial("~/Views/Main/Modals/Settings.cshtml")
-    @Html.Partial("~/Views/Main/Modals/AddFeed.cshtml", new Reader.Web.Models.AddFeedModel())
     <script src="~/a/js/lib/jquery.validate.js"></script>
     <script src="~/a/js/lib/jquery.validate.unobtrusive.js"></script>
 </body>
