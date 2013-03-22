@@ -7,32 +7,8 @@
     <link rel="stylesheet/less" type="text/css" href="~/a/less/app.less" />
     <script src="~/a/js/lib/less.js"></script>
 </head>
-<body>
-    <nav class="meny row-fluid">
-        <h1>MiniReader</h1>
-        <ul>
-            <li>
-                <button type="button" class="btn">All</button></li>
-            <li>
-                <button type="button" class="btn" data-toggle="modal" data-target="#AddFeedModal">Add</button></li>
-        </ul>
-        <ul id="Feeds">
-            <li>One</li>
-            <li>Two</li>
-            <li>Three</li>
-        </ul>
-        <div class="span12 navbar-fixed-bottom">
-            <div class="row-fluid">
-                <div class="span6">
-                    <a data-toggle="modal" data-target="#SettingsModal" class="btn btn-block">Settings
-                    </a>
-                </div>
-                <div class="span6">
-                    <a href="/sign-out" class="btn btn-block">Sign Out</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+<body style="background-color:#333">
+    @Html.Partial("~/Views/Main/Components/Navigation.cshtml")
     <div class="container-fluid" style="overflow: hidden;">
         <div class="span12">
                 @foreach (var article in Model)

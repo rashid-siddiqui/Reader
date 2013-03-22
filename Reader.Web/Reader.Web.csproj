@@ -216,6 +216,7 @@
     <Content Include="a\font\fontawesome\fontawesome-webfont.ttf" />
     <Content Include="a\font\fontawesome\fontawesome-webfont.eot" />
     <Content Include="a\font\fontawesome\FontAwesome.otf" />
+    <Content Include="Views\Main\Components\Navigation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\" />

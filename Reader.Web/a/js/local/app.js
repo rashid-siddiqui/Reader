@@ -7,7 +7,7 @@ var App = (function (self, $, Meny)
         menuElement: document.querySelector('.meny'),
         contentsElement: document.querySelector('.container-fluid'),
         position: 'right',
-        width: 300
+        width: 220
     });
 
     document.ontouchmove = function (e) {
