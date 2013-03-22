@@ -45,3 +45,5 @@ C:\Users\Tristan McNab\Projects\Reader\Reader.Web\bin\QDFeedParser.dll
 C:\Users\Tristan McNab\Projects\Reader\Reader.Web\bin\NReadability.dll
 C:\Users\Tristan McNab\Projects\Reader\Reader.Web\bin\SgmlReaderDll.dll
 C:\Users\Tristan McNab\Projects\Reader\Reader.Web\bin\NReadability.xml
+C:\Users\Tristan McNab\Projects\Reader\Reader.Web\bin\Reader.Support.dll
+C:\Users\Tristan McNab\Projects\Reader\Reader.Web\bin\Reader.Support.pdb

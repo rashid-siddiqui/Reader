@@ -64,6 +64,10 @@
       <Project>{7bc2c859-9095-4614-8e7c-a616718ae49c}</Project>
       <Name>Reader.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Reader.Support\Reader.Support.csproj">
+      <Project>{2d6a3426-f537-406b-9b14-20436114b4fe}</Project>
+      <Name>Reader.Support</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />

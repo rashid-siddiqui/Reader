@@ -7,6 +7,7 @@
     using Reader.Services;
     using NReadability;
     using System.Linq;
+    using Reader.Web.Models;
 
     public class MainController : Controller
     {
@@ -22,9 +23,6 @@
                     .SelectMany(i => i)
                     .OrderByDescending(k => k.published);
 
-                var transcoder = new NReadabilityWebTranscoder();
-                var tr2 = new NReadabilityTranscoder(ReadingStyle.Newspaper, ReadingMargin.Medium, ReadingSize.Medium);
-                bool outy = false;
 
 
                 var model = feeds.Select(p => new Models.ArticleItem()
@@ -46,23 +44,23 @@
         #region POST /sign-in
 
         [POST("/sign-in")]
-        public JsonResult SignIn(string assertion)
+        public JsonResult SignIn(SignInViewModel viewmodel)
         {
-            var authentication = new BrowserIDAuthentication();
-            var verificationResult = authentication.Verify(assertion);
-            if (verificationResult.IsVerified)
-            {
-                string email = verificationResult.Email.Trim().ToLower();
-                if (!Accounts.Exists(email) && !Accounts.Create(email, 10.0M))
-                {
-                    return Json(false);
-                }
-                else
-                {
-                    FormsAuthentication.SetAuthCookie(email, false);
-                    return Json(true);
-                }
-            }
+            //var authentication = new BrowserIDAuthentication();
+            //var verificationResult = authentication.Verify(assertion);
+            //if (verificationResult.IsVerified)
+            //{
+            //    string email = verificationResult.Email.Trim().ToLower();
+            //    if (!Accounts.Exists(email) && !Accounts.Register(email, 10.0M))
+            //    {
+            //        return Json(false);
+            //    }
+            //    else
+            //    {
+            //        FormsAuthentication.SetAuthCookie(email, false);
+            //        return Json(true);
+            //    }
+            //}
 
             return Json(null);
         }

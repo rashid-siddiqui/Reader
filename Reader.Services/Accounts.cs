@@ -5,6 +5,8 @@
     using Reader.Data;
     using System.Collections.Generic;
     using System.Security.Principal;
+    using Reader.StaticAnalysis;
+    using System.Security.Cryptography;
 
     public static class Accounts
     {
@@ -25,8 +27,12 @@
             ) != null;
         }
 
-        public static bool Create(string email_address, decimal initial_balance)
+        public static bool Register(string email_address, string plaintext_password, decimal initial_balance)
         {
+            Ensure.IsNotNullOrWhitespace<ArgumentException>(email_address);
+            Ensure.IsNotNullOrWhitespace<ArgumentException>(plaintext_password);
+            Ensure.IsTrue<ArgumentException>(initial_balance >= 0.0M);
+
             if (Accounts.Exists(email_address)) 
             {
                 return false;
@@ -37,8 +43,11 @@
                 balance = initial_balance,
                 email_address = email_address,
                 last_login = DateTime.UtcNow,
-                feeds = new SortedDictionary<string,List<string>>()
+                feeds = new SortedDictionary<string,List<string>>(),
+                password_salt = Guid.NewGuid().ToByteArray()
             };
+
+           
 
             return Accounts.Entities.Insert(entity);
         }

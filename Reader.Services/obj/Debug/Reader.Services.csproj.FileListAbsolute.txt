@@ -10,3 +10,5 @@ C:\Users\Tristan McNab\Projects\Reader\Reader.Services\bin\Debug\MongoDB.Bson.xm
 C:\Users\Tristan McNab\Projects\Reader\Reader.Services\bin\Debug\MongoDB.Driver.xml
 C:\Users\Tristan McNab\Projects\Reader\Reader.Services\bin\Debug\Reader.Data.dll
 C:\Users\Tristan McNab\Projects\Reader\Reader.Services\bin\Debug\Reader.Data.pdb
+C:\Users\Tristan McNab\Projects\Reader\Reader.Services\bin\Debug\Reader.Support.dll
+C:\Users\Tristan McNab\Projects\Reader\Reader.Services\bin\Debug\Reader.Support.pdb

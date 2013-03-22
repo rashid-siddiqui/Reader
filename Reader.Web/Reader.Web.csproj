@@ -136,6 +136,7 @@
     </Compile>
     <Compile Include="Models\AddFeedModel.cs" />
     <Compile Include="Models\ArticleItem.cs" />
+    <Compile Include="Models\SignInViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +146,7 @@
     <Content Include="a\js\lib\meny.js" />
     <Content Include="a\js\local\app.addfeed.js" />
     <Content Include="a\js\local\app.js" />
+    <Content Include="a\font\fontawesome\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
     <None Include="a\js\lib\jquery-vsdoc.js" />
     <Content Include="a\js\lib\jquery.js" />
@@ -206,6 +208,13 @@
     <Content Include="a\less\bootstrap\bootswatch.less" />
     <Content Include="Views\Main\Modals\Settings.cshtml" />
     <Content Include="Views\Main\Modals\AddFeed.cshtml" />
+    <Content Include="Views\Main\Splash\SignInPartialView.cshtml" />
+    <Content Include="a\less\bootstrap\font-awesome-ie7.less" />
+    <Content Include="a\less\bootstrap\font-awesome.less" />
+    <Content Include="a\font\fontawesome\fontawesome-webfont.woff" />
+    <Content Include="a\font\fontawesome\fontawesome-webfont.ttf" />
+    <Content Include="a\font\fontawesome\fontawesome-webfont.eot" />
+    <Content Include="a\font\fontawesome\FontAwesome.otf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\" />
