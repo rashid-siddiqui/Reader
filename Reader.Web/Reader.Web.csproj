@@ -143,6 +143,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="a\js\lib\jquery.nested.js" />
     <Content Include="a\js\lib\meny.js" />
     <Content Include="a\js\local\app.js" />
     <Content Include="a\font\fontawesome\fontawesome-webfont.svg" />

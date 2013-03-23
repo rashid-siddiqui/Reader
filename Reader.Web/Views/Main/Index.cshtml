@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model IEnumerable<Reader.Web.Models.ArticleItem>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -9,16 +10,18 @@
 <body style="background-color:#333">
     @Html.Partial("~/Views/Main/Components/Navigation.cshtml")
     <div class="container-fluid">
-        <div class="tab-content">
+        <div class="tab-content" style="max-height:100%">
             @Html.Partial("~/Views/Main/Tabs/Home.cshtml")
-            @Html.Partial("~/Views/Main/Tabs/Feeds.cshtml")
+            @Html.Partial("~/Views/Main/Tabs/Feeds.cshtml", Model)
             @Html.Partial("~/Views/Main/Tabs/Pages.cshtml")
             @Html.Partial("~/Views/Main/Tabs/Settings.cshtml")
         </div>
     </div>
+    @Html.Partial("~/Views/Main/Modals/AddFeed.cshtml", new Reader.Web.Models.AddFeedModel())
     <script src="~/a/js/lib/meny.js"></script>
     <script src="~/a/js/lib/jquery.js"></script>
     <script src="~/a/js/lib/bootstrap.js"></script>
+    <script src="~/a/js/lib/jquery.nested.js"></script>
     <script src="~/a/js/local/app.js"></script>
     <script src="~/a/js/lib/jquery.validate.js"></script>
     <script src="~/a/js/lib/jquery.validate.unobtrusive.js"></script>

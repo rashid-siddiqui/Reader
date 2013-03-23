@@ -1,3 +1,15 @@
-﻿<div class="tab-pane fade" id="tabFeeds">
-                Feeds
-            </div>
+﻿@model IEnumerable<Reader.Web.Models.ArticleItem>
+
+<div class="tab-pane fade" id="tabFeeds">
+    <article class="span2">
+        <a data-toggle="modal" data-target="#AddFeedModal">
+            <h1><i class="icon-plus"></i></h1>
+        </a>
+    </article>
+    @foreach (var article in Model)
+    {
+        <article class="span2">
+            <h3>@article.Article.title</h3>
+        </article>
+    }
+</div>
