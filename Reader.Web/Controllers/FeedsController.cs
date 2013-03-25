@@ -1,10 +1,10 @@
 ﻿namespace Reader.Web.Controllers
 {
+    using System.Linq;
     using System.Web.Mvc;
-    using Reader.Web.Models;
     using AttributeRouting.Web.Mvc;
     using Reader.Services;
-    using System.Linq;
+    using Reader.Web.Models;
 
     public class FeedsController : Controller
     {

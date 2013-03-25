@@ -13,6 +13,8 @@
 
         public decimal balance { get; set; }
 
+        public string bookmark_key { get; set; }
+
         public string email_address { get; set; }
 
         public SortedDictionary<string, List<string>> feeds { get; set; }
@@ -45,6 +47,7 @@
         public AccountEntity(string email_address, string password, decimal balance)
         {
             this.balance = balance;
+            this.bookmark_key = Guid.NewGuid().ToString("N");
             this.email_address = email_address;
             this.feeds = new SortedDictionary<string, List<string>>();
             this.last_login = DateTime.UtcNow;

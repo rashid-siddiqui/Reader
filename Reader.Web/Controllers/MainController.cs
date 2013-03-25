@@ -42,21 +42,35 @@
         #region POST /sign-in
 
         [POST("/sign-in")]
-        public JsonResult SignIn(SignInViewModel viewmodel)
+        public ActionResult SignIn(SignInViewModel viewmodel)
         {
-            //
-            if (!ModelState.IsValid) return Json(false);
-
-            //
-            if (!Accounts.Exists(viewmodel.Email)) {
-                if (!Accounts.Register(viewmodel.Email, viewmodel.Password, 10.0M)) return Json(false);
+            // Ensure model is valid
+            if (!ModelState.IsValid)
+            {
+                return View("Splash");
             }
 
-            //
-            if (!Accounts.CanSignIn(viewmodel.Email, viewmodel.Password)) return Json(false);
+            // Create an account if not exists
+            if (!Accounts.Exists(viewmodel.Email)) 
+            {
+                if (!Accounts.Register(viewmodel.Email, viewmodel.Password, 10.0M))
+                {
+                    ModelState.AddModelError(string.Empty, "There was an error registering accounts.");
+                    return View("Splash");
+                }
+            }
 
-            FormsAuthentication.SetAuthCookie(viewmodel.Email.ToLower(), false);
-            return Json(true);
+            // Sign the account in
+            if (!Accounts.CanSignIn(viewmodel.Email, viewmodel.Password))
+            {
+                ModelState.AddModelError(string.Empty, "The username or password provided is incorrect.");
+                return View("Splash");
+            }
+            else
+            {
+                FormsAuthentication.SetAuthCookie(viewmodel.Email.ToLower(), false);
+                return RedirectToAction("Index");
+            }
         }
 
         #endregion

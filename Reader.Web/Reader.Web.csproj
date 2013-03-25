@@ -131,6 +131,7 @@
     <Compile Include="App_Start\AttributeRoutingConfig.cs" />
     <Compile Include="Controllers\FeedsController.cs" />
     <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\PagesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -147,7 +148,6 @@
     <Content Include="a\js\lib\meny.js" />
     <Content Include="a\js\local\app.js" />
     <Content Include="a\font\fontawesome\fontawesome-webfont.svg" />
-    <Content Include="a\js\local\splash.js" />
     <Content Include="Global.asax" />
     <None Include="a\js\lib\jquery-vsdoc.js" />
     <Content Include="a\js\lib\jquery.js" />
@@ -223,7 +223,7 @@
     <Content Include="Views\Main\Tabs\Settings.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\" />
+    <Folder Include="ApiControllers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

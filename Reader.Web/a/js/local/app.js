@@ -18,6 +18,33 @@ var App = (function (self, $, Meny)
         }
     };
 
+    $('[data-toggle="font"]').click(function () {
+        switch ($(this).data('action')) {
+            case 'increase':
+                $('p').css({
+                    'font-size': parseInt($('p').css('font-size')) + 1
+                });
+                break;
+
+            case 'decrease':
+                $('p').css({
+                    'font-size': parseInt($('p').css('font-size')) - 1
+                });
+                break;
+
+            case 'justify-left':
+                $('p').css({
+                    'text-align': 'left'
+                });
+                break;
+
+            case 'justify-full':
+                $('p').css({
+                    'text-align': 'justify'
+                });
+                break;
+        }
+    });
 
     return self;
 }(App || {}, jQuery, Meny));

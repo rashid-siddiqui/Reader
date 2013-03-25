@@ -10,25 +10,31 @@
     <script src="~/a/js/lib/less.js"></script>
 </head>
 <body>
-    <div class="container-fluid">
-        <header>
-            <h1><i class="icon-bookmark"></i> MiniReader</h1>
-            <h2>Simple Feeds &amp; Page Saving</h2>
+    <div class="container">
+        <header class="row">
+            <div class="span1 hidden-phone">
+                <i class="icon-bookmark" style="font-size: 100px; color: #000"></i>
+            </div>
+            <div class="span4">
+                <h1>MiniReader</h1>
+                <h2>Just Feeds &amp; Pages</h2>
+            </div>
         </header>
-        <hr />
-        <section>
-            <p>This is a byline area about features etc.</p>
+        
+        <section class="hidden-phone">
+            <ul class="thumbnails">
+                <li class="span2">First</li>
+                <li class="span2">Second</li>
+                <li class="span2">Third</li>
+            </ul>
         </section>
-        <hr />
         @Html.Partial("~/Views/Main/Splash/SignInPartialView.cshtml", new Reader.Web.Models.SignInViewModel())
-        <hr />
         <footer style="text-align: center" class="navbar-fixed-bottom">
-            <p><small>&copy; Tristan McNab 2013</small></p>
+            <p><small>by <a href="https://github.com/tmcnab" target="_blank">@@tmcnab</a> with some love and care I guess</small></p>
         </footer>
     </div>
     <script src="~/a/js/lib/jquery.js"></script>
     <script src="~/a/js/lib/jquery.validate.js"></script>
     <script src="~/a/js/lib/jquery.validate.unobtrusive.js"></script>
-    <script src="~/a/js/local/splash.js"></script>
 </body>
 </html>
